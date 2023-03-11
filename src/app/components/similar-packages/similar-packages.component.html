@@ -1,0 +1,10 @@
+<section class="similar_packages py-5">
+    <div class="container-lg px-sm-4 px-3">
+        <h2 class="txt_blue h1 fw_1000 pb-2 mb-5">باقات مشابهة</h2>
+        <div class="row row_packages">
+            <div class="col-xl-4 col-md-6 mb-4" *ngFor="let package of packages">
+                <app-package-card [packageData]="package"></app-package-card>
+            </div>
+        </div>
+    </div>
+</section>

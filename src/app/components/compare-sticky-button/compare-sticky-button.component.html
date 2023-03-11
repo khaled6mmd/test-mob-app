@@ -1,0 +1,29 @@
+<div class="popup_backdrop" [ngClass]="{'active': isPopupOpen && items.length}"></div>
+<div class="sticky_button_wrapper">
+  <div class="popup_wrapper p-3" [ngClass]="{'active': isPopupOpen && items.length}">
+    <div class="d-flex align-items-center justify-content-between mb-4">
+      <p class="mb-0 fs_18 fw-bold txt_blue">المقارنة</p>
+      <a class="txt_light_red link_style c_pointer fw-semibold" (click)="removeAllBtn()">حذف كل العناصر</a>
+    </div>
+    <div>
+      <div class="list_wrapper" *ngFor="let item of items">
+        <div class="list_img ms-3">
+          <img [src]="item.image" alt="">
+        </div>
+        <div class="txt_blue fw-bold">
+          <p class="fs_18 mb-0">{{ item.name }}</p>
+          <p class="h5">{{ item.price }} <span class="opacity-50 txt_blue fs_14">ريال</span></p>
+        </div>
+        <button class="remove_icon me-auto" (click)="removeBtn(item)">
+          <i class="fa-regular fa-circle-xmark"></i>
+        </button>
+      </div>
+    </div>
+    <div class="mt-4">
+      <a href="#" class="blue_btn" (click)="compareNow()">قارن الآن</a>
+    </div>
+  </div>
+  <button class="compare_btn compare_btn_c" [ngClass]="{'opened': isPopupOpen, 'closed': !isPopupOpen}" id="popup_btn" (click)="togglePopup()">
+    <img src="assets/images/arrow-right-left-icon.svg" class="sticky_btn_img" alt="">
+  </button>
+</div>

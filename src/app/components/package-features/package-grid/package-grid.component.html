@@ -1,0 +1,14 @@
+<div class="primary_shadow bg-white white_box p-4">
+    <h5 class="txt_blue fw-bold mb-4">{{ title }}</h5>
+    <div class="grids_wrapper">
+        <div *ngFor="let feature of features" class="features_grid">
+            <div class="features_grid_img">
+                <img src="{{ feature.imgSrc }}" class="mt-1 ms-3" alt="">
+            </div>
+            <div class="features_grid_txt">
+                <p class="mb-1 fw-bold txt_silver1">{{ feature.label }}</p>
+                <p class="mb-0 fs_18 txt_blue fw-bold">{{ feature.value }}</p>
+            </div>
+        </div>
+    </div>
+</div>
