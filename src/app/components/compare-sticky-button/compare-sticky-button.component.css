@@ -34,14 +34,12 @@
 }
 
 .compare_btn.closed {
-    transform: rotate(0deg) scale(1);
+    transform: rotate(0deg) scale(1) ;
     transition: all .3s ease-out;
 }
 
 .sticky_btn_img {
-
     width: 34px;
-
     transition: all .2s ease-in-out;
 }
 

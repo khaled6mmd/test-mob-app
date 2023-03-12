@@ -8,7 +8,7 @@
     <div>
       <div class="list_wrapper" *ngFor="let item of items">
         <div class="list_img ms-3">
-          <img [src]="item.image" alt="">
+          <img [src]="item.image" [alt]="item.name">
         </div>
         <div class="txt_blue fw-bold">
           <p class="fs_18 mb-0">{{ item.name }}</p>
@@ -24,6 +24,6 @@
     </div>
   </div>
   <button class="compare_btn compare_btn_c" [ngClass]="{'opened': isPopupOpen, 'closed': !isPopupOpen}" id="popup_btn" (click)="togglePopup()">
-    <img src="assets/images/arrow-right-left-icon.svg" class="sticky_btn_img" alt="">
+    <img src="assets/images/arrow-right-left-icon.svg" class="sticky_btn_img" alt="compare">
   </button>
 </div>

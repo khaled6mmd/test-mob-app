@@ -3,7 +3,7 @@
     <div class="grids_wrapper">
         <div *ngFor="let feature of features" class="features_grid">
             <div class="features_grid_img">
-                <img src="{{ feature.imgSrc }}" class="mt-1 ms-3" alt="">
+                <img src="{{ feature.imgSrc }}" class="mt-1 ms-3" [alt]="feature.label">
             </div>
             <div class="features_grid_txt">
                 <p class="mb-1 fw-bold txt_silver1">{{ feature.label }}</p>

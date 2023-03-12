@@ -2,7 +2,7 @@
     <div class="top" [ngClass]="packageData.color">
         <div class="d-flex align-items-center justify-content-between position-relative">
             <h4 class="text-white fw_1000 mb-0">{{packageData.name}}</h4>
-            <img [src]="packageData.icon" alt="icon">
+            <img [src]="packageData.icon" [alt]="packageData.name">
         </div>
     </div>
 
@@ -12,7 +12,7 @@
                 <div class="d-flex justify-content-md-between justify-content-center">
                     <div
                         class="d-flex flex-md-row flex-column align-items-center justify-content-md-start justify-content-center mb-md-4">
-                        <img src="assets/images/signal-icon.svg" alt="">
+                        <img src="assets/images/signal-icon.svg" alt="signal icon">
                         <div class="me-md-3 mt-md-0 mt-auto pt-md-0 pt-3">
                             <p class="txt_silver1 fw-bold mb-1 text-md-end text-center">{{packageData.data.label}}</p>
                             <p class="mb-0 txt_blue fw-bold text-md-end text-center">
@@ -20,13 +20,13 @@
                         </div>
                     </div>
                     <div class="d-md-block d-none">
-                        <img src="assets/images/sim-card.png" alt="">
-                        <img class="me-2" src="assets/images/chip-icon.png" alt="">
+                        <img src="assets/images/sim-card.png" alt="sim card icon">
+                        <img class="me-2" src="assets/images/chip-icon.png" alt="chip icon">
                     </div>
                 </div>
                 <div
                     class="d-flex flex-md-row flex-column align-items-center justify-content-md-start justify-content-center mb-md-4">
-                    <img src="assets/images/smart-phone.svg" alt="">
+                    <img src="assets/images/smart-phone.svg" alt="smart phone icon">
                     <div class="me-md-3 mt-md-0 mt-auto pt-md-0 pt-3">
                         <p class="txt_silver1 fw-bold mb-1 text-md-end text-center">{{packageData.minutes.label}}</p>
                         <p class="mb-0 txt_blue fw-bold text-md-end text-center">{{packageData.minutes.value}}
@@ -35,7 +35,7 @@
                 </div>
                 <div
                     class="d-flex flex-md-row flex-column align-items-center justify-content-md-start justify-content-center mb-md-4">
-                    <img src="assets/images/calendar-icon.svg" alt="">
+                    <img src="assets/images/calendar-icon.svg" alt="calendar icon">
                     <div class="me-md-3 mt-md-0 mt-auto pt-md-0 pt-3">
                         <p class="txt_silver1 fw-bold mb-1 text-md-end text-center">{{packageData.validity.label}}</p>
                         <p class="mb-0 txt_blue fw-bold text-md-end text-center">
@@ -52,7 +52,7 @@
                             class="fw-bold fs_26 mb-0 ms-1">{{packageData.price.value}}</span>
                         {{packageData.price.currency}}</p>
                     <p class="txt_silver1 fw-bold mb-2 fs_14" *ngIf="packageData.tax.value">
-                        {{packageData.tax.label}}+</p>
+                        + {{packageData.tax.label}}</p>
                 </div>
                 <div class="mb-sm-3 pt-1">
                     <a href="#" class="btn_package py-1 px-2 fw-bold">{{packageData.buttonLabel}}</a>
